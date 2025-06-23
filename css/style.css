@@ -449,6 +449,13 @@ textarea {
 .project-details__showcase-img {
   width: 100%; }
 
+.project-details__showcase-banner {
+  width: 75%;
+  border: 2px solid #000;
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto; }
+
 .project-details__content-main {
   width: 100%;
   max-width: 70rem;

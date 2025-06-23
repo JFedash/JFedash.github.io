@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>DataQuest AI Hackathon | Jack Fedash</title>
+    <title>Sales Tax Recovery | Jack Fedash</title>
     <meta name="description" content="Case study page of Project" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -84,10 +84,10 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">DataQuest AI Hackathon (April 2024)</h1>
+        <h1 class="heading-primary">Sales Tax Recovery with Stratos (August 2024)</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Built a machine learning model to detect fraudulent transactions using real-world banking data in a high-pressure 3-day hackathon.
+            Identified tax overpayments and supported audit processes using Excel and SAP during a system transition at Teva Pharmaceuticals.
           </p>
         </div>
       </div>
@@ -97,7 +97,7 @@
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
             <img
-              src="./assets/images/project1-banner.jpg"
+              src="./assets/images/project3-banner.png"
               alt="Project Image"
               class="project-details__showcase-banner"
             />
@@ -106,75 +106,46 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Problem/Goal</h3>
               <p class="project-details__desc-para">
-                The objective was to classify banking transactions as fraudulent or legitimate using a labeled dataset. We were given structured data (e.g., location, date, amount, time) and asked to develop an ML model capable of identifying fraudulent activity in an unseen test set.
+                During Teva’s transition from Oracle to SAP, some transactional data was improperly reported or left unaccounted for. Our goal was to identify overpaid sales tax on legacy transactions and assist with audit responses to the CRA and Revenue Quebec.
               </p>
               <h3 class="project-details__content-title">My Role</h3>
               <p class="project-details__desc-para">
-                I led the development of our machine learning model as part of a four-person team. Another teammate and I handled all technical implementation, while I took the lead on the overall machine learning pipeline including research, model selection, training, and tuning. The remaining teammates focused on the presentation and documentation.
+                I worked with both Teva’s internal IT team and the Stratos Solutions recovery team to investigate and identify tax overpayments. My responsibilities focused on data extraction, validation, reconciliation, and reporting.
               </p>
               <h3 class="project-details__content-title">Process</h3>
               <p class="project-details__desc-para">
-                <strong>Planning</strong><br>
-                Since we were not told the challenge topic in advance, I began by researching various machine learning models, their typical use cases, and evaluation techniques. This general preparation helped us pivot quickly once the fraud detection task was announced.
+                We extracted relevant transactional data from SAP and reformatted it according to audit and recovery standards. I used Excel to clean, organize, and reconcile data, frequently identifying mismatches in tax values or missing entries. When discrepancies appeared, I used various SAP navigation methods to trace and retrieve missing transactions.
                 <br><br>
-                Given the limited time and our lack of prior ML experience, we chose to follow a prototyping strategy. This meant rapidly developing functional versions of our model, testing frequently, and iterating based on results. Our focus was on continuous improvement and flexibility, rather than building a perfect solution upfront.
-              </p>
-              <p class="project-details__desc-para">
-                <strong>Development</strong><br>
-                Using Python, we implemented a random forest classifier. I handled data preprocessing, feature selection, and model training. I experimented with different model parameters to reduce overfitting and improve performance, adjusting our approach as new insights emerged during development.
-              </p>
-              <p class="project-details__desc-para">
-                <strong>Testing</strong><br>
-                We tested frequently throughout the process, using accuracy, precision, recall, and F1-score to measure performance. I set up a repeatable workflow for evaluating model behavior and used the results to guide our next steps.
-              </p>
-              <p class="project-details__desc-para">
-                <strong>Collaboration</strong><br>
-                I collaborated closely with my co-developer, sharing ideas, comparing techniques, and problem-solving together. We also kept the rest of the team in the loop to ensure they could accurately communicate our methods and results in the final presentation.
+                Throughout the process, we collaborated closely with Stratos Solutions, sending regular reports and adjusting our output based on their feedback and audit requirements.
+
+
               </p>
             </div>
             <h3 class="project-details__content-title">Challenges and Solutions</h3>
               <p class="project-details__desc-para">
-                The biggest challenge was entering a technical ML competition with no prior experience and very little time to prepare. I took initiative to quickly learn the fundamentals, guide our team’s technical approach, and adapt to new tools in real time. Our use of a flexible, prototype-based workflow helped us stay on track and deliver a working solution under pressure.
+                There was no predefined workflow, and we regularly encountered issues such as incomplete fields, mismatched totals, or improperly exported data. I used logical cross-checking in Excel and iterative testing in SAP to track down inconsistencies and fill in the gaps. I had to think critically and adapt quickly to ensure the recovery files were accurate and complete.
               </p>
             <h3 class="project-details__content-title">Outcome</h3>
               <p class="project-details__desc-para">
-                Our final model correctly identified approximately 75 percent of fraudulent transactions in the test dataset. While we didn’t win, we successfully delivered a functioning solution and gained valuable real-world experience with machine learning and collaborative development.
+                I contributed to identifying C$401,000 in tax overpayments across legacy transactions, enabling Teva to recover significant amounts of GST, HST, and QST. I also supported the preparation of data packages for audit requests from the Canada Revenue Agency and Revenue Quebec, ensuring compliance and transparency throughout the process.
+                <br><br>
+                This experience demonstrated my ability to apply technical tools and analytical thinking in a real-world enterprise environment.
               </p>
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Skills</h3>
               <div class="skills">
-                <div class="skills__skill">Python</div>
-                <div class="skills__skill">Machine Learning</div>
-                <div class="skills__skill">Communication</div>
-                <div class="skills__skill">Adaptability</div>
+                <div class="skills__skill">SAP GUI</div>
+                <div class="skills__skill">Excel</div>
+                <div class="skills__skill">Data Analysis</div>
+                <div class="skills__skill">Financial Analysis</div>
+                <div class="skills__skill">Collaboration</div>
               </div>
             </div>
             <div class="project-details__links">
               <h3 class="project-details__content-title">Links</h3>
-              <a
-                href="#"
-                class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank"
-                >Training Data</a
-              >
-              <a
-                href="#"
-                class="btn btn--med btn--theme project-details__links-btn"
-                target="_blank"
-                >Final Model Code</a
-              ><br><br>
-              <a
-                href="#"
-                class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank"
-                >Presentation Slides</a
-              >
-              <a
-                href="#"
-                class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank"
-                >Evaluation Dataset</a
-              >
+              <p class="project-details__desc-para">
+                Due to the confidential nature of the work, no data or documentation can be publicly shared.
+              </p>
             </div>
           </div>
         </div>

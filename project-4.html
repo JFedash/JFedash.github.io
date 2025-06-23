@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>DataQuest AI Hackathon | Jack Fedash</title>
+    <title>United Way Stair Climb Website | Jack Fedash</title>
     <meta name="description" content="Case study page of Project" />
 
     <link rel="stylesheet" href="css/style.css" />
@@ -84,10 +84,10 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">DataQuest AI Hackathon (April 2024)</h1>
+        <h1 class="heading-primary">United Way Stair Climb Website (November 2024)</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            Built a machine learning model to detect fraudulent transactions using real-world banking data in a high-pressure 3-day hackathon.
+            Developed a full-stack website to support event registration and participant tracking for United Way’s Stair Climb.
           </p>
         </div>
       </div>
@@ -97,7 +97,7 @@
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
             <img
-              src="./assets/images/project1-banner.jpg"
+              src="./assets/images/project4-banner.jpg"
               alt="Project Image"
               class="project-details__showcase-banner"
             />
@@ -106,74 +106,56 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Problem/Goal</h3>
               <p class="project-details__desc-para">
-                The objective was to classify banking transactions as fraudulent or legitimate using a labeled dataset. We were given structured data (e.g., location, date, amount, time) and asked to develop an ML model capable of identifying fraudulent activity in an unseen test set.
+                United Way needed a centralized, accessible platform to allow participants to register and track their steps, while also providing event managers with tools to oversee and update participant data. Key requirements included a live leaderboard, step entry forms, and an admin panel to edit, delete, or manually add participant records.
               </p>
               <h3 class="project-details__content-title">My Role</h3>
               <p class="project-details__desc-para">
-                I led the development of our machine learning model as part of a four-person team. Another teammate and I handled all technical implementation, while I took the lead on the overall machine learning pipeline including research, model selection, training, and tuning. The remaining teammates focused on the presentation and documentation.
+                As a backend developer on the TSI team, I helped build and maintain core functionality for the website. This included setting up API routes, managing CSV data handling, and ensuring smooth communication between the frontend (React) and backend (Flask).
               </p>
               <h3 class="project-details__content-title">Process</h3>
               <p class="project-details__desc-para">
                 <strong>Planning</strong><br>
-                Since we were not told the challenge topic in advance, I began by researching various machine learning models, their typical use cases, and evaluation techniques. This general preparation helped us pivot quickly once the fraud detection task was announced.
-                <br><br>
-                Given the limited time and our lack of prior ML experience, we chose to follow a prototyping strategy. This meant rapidly developing functional versions of our model, testing frequently, and iterating based on results. Our focus was on continuous improvement and flexibility, rather than building a perfect solution upfront.
+                We kicked off the project by meeting with United Way to gather detailed functional requirements. After weighing options like a mobile app versus a web app, we agreed on a responsive website for broader accessibility. Our team then divided responsibilities between frontend and backend and established a collaborative GitHub workflow.
               </p>
               <p class="project-details__desc-para">
                 <strong>Development</strong><br>
-                Using Python, we implemented a random forest classifier. I handled data preprocessing, feature selection, and model training. I experimented with different model parameters to reduce overfitting and improve performance, adjusting our approach as new insights emerged during development.
+                Using Flask for the backend and React for the frontend, we developed a simple and intuitive web interface. I focused on setting up server-side logic for data handling, including CSV file management and API endpoints to support registration and step tracking.
               </p>
               <p class="project-details__desc-para">
                 <strong>Testing</strong><br>
-                We tested frequently throughout the process, using accuracy, precision, recall, and F1-score to measure performance. I set up a repeatable workflow for evaluating model behavior and used the results to guide our next steps.
+                Features were tested iteratively as they were built. Once a feature passed local testing and peer review, it was merged into the main GitHub branch. This approach helped us maintain a stable build throughout development.
               </p>
               <p class="project-details__desc-para">
                 <strong>Collaboration</strong><br>
-                I collaborated closely with my co-developer, sharing ideas, comparing techniques, and problem-solving together. We also kept the rest of the team in the loop to ensure they could accurately communicate our methods and results in the final presentation.
+                Frequent team meetings kept everyone aligned on progress and deadlines. We used GitHub Issues and group chats to track tasks and troubleshoot in real-time, which was crucial given our tight timeline and varying schedules.
               </p>
             </div>
             <h3 class="project-details__content-title">Challenges and Solutions</h3>
               <p class="project-details__desc-para">
-                The biggest challenge was entering a technical ML competition with no prior experience and very little time to prepare. I took initiative to quickly learn the fundamentals, guide our team’s technical approach, and adapt to new tools in real time. Our use of a flexible, prototype-based workflow helped us stay on track and deliver a working solution under pressure.
+                The biggest challenge was the accelerated timeline, United Way’s event started in October, leaving us just weeks to deliver a working product. Many of us, myself included, had limited experience with React and Flask, which meant learning on the fly. I adapted quickly, teaching myself the necessary frameworks and contributing production-ready code under pressure.
               </p>
             <h3 class="project-details__content-title">Outcome</h3>
               <p class="project-details__desc-para">
-                Our final model correctly identified approximately 75 percent of fraudulent transactions in the test dataset. While we didn’t win, we successfully delivered a functioning solution and gained valuable real-world experience with machine learning and collaborative development.
+                Despite the time constraints and steep learning curve, our team successfully delivered a working platform on time. The website was used by participants and event managers throughout the Stair Climb, and United Way was pleased with the functionality and user experience.
               </p>
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Skills</h3>
               <div class="skills">
-                <div class="skills__skill">Python</div>
-                <div class="skills__skill">Machine Learning</div>
-                <div class="skills__skill">Communication</div>
+                <div class="skills__skill">React</div>
+                <div class="skills__skill">Full-Stack Development</div>
+                <div class="skills__skill">GitHub</div>
+                <div class="skills__skill">Flask</div>
+                <div class="skills__skill">Collaboration</div>
                 <div class="skills__skill">Adaptability</div>
               </div>
             </div>
             <div class="project-details__links">
               <h3 class="project-details__content-title">Links</h3>
               <a
-                href="#"
-                class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank"
-                >Training Data</a
-              >
-              <a
-                href="#"
+                href="https://jxohg.github.io/leaderboard-app/"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
-                >Final Model Code</a
-              ><br><br>
-              <a
-                href="#"
-                class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank"
-                >Presentation Slides</a
-              >
-              <a
-                href="#"
-                class="btn btn--med btn--theme-inv project-details__links-btn"
-                target="_blank"
-                >Evaluation Dataset</a
+                >Visit Website</a
               >
             </div>
           </div>
