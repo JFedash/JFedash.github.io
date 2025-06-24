@@ -185,7 +185,7 @@ textarea {
 
 .home-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(30, 136, 229, 0.8)), url(../assets/svg/common-bg.svg);
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -323,7 +323,7 @@ textarea {
           font-size: 1.7rem; } }
 
 .contact {
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(30, 136, 229, 0.8)), url(../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center; }
   .contact__form-container {
@@ -404,7 +404,7 @@ textarea {
 
 .project-cs-hero {
   color: #fff;
-  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(0, 98, 185, 0.8)), url(../../assets/svg/common-bg.svg);
+  background: linear-gradient(to right, rgba(0, 98, 185, 0.8), rgba(30, 136, 229, 0.8)), url(../assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -679,6 +679,26 @@ textarea {
     font-weight: 600;
     color: #777; }
 
+.reviews-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 700px; /* Optional: control width */
+  margin: 0 auto;   /* Center horizontally */
+}
+
+.reviews-list li {
+  background: #f9f9f9;
+  border-left: 4px solid #0062b9;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.6rem;
+  border-radius: 4px;
+
+  font-style: italic; /* Italics for the review text */
+  color: #333;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
 .mouse {
   width: 25px;
   height: 40px;
@@ -709,3 +729,20 @@ textarea {
   to {
     opacity: 0;
     top: 27px; } }
+
+/* Background colors */
+.dark-mode__bg-gradient {
+  background: linear-gradient(to right, rgba(0, 60, 120, 0.9), rgba(20, 90, 170, 0.9)), url(../assets/svg/common-bg.svg);
+}
+.dark-mode__bg-white      { background: #121212; }
+.dark-mode__bg-blue       { background: #003a75; }
+.dark-mode__bg-lightgrey  { background: #2e2e2e; }
+.dark-mode__bg-inputgrey  { background: #3a3a3a; }
+
+/* Text colors */
+.dark-mode__color-white    { color: #eee; }
+.dark-mode__color-lightgray { color: #ddd; }
+.dark-mode__color-grey     { color: #bbb; }
+.dark-mode__color-darkgrey { color: #ccc; }
+
+
