@@ -8,6 +8,7 @@
     <meta name="description" content="Portfolio" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/devices.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -45,6 +46,11 @@
             <li class="header__link-wrapper">
               <a href="./index.html#contact" class="header__link"> Contact </a>
             </li>
+            <li class="header__link-wrapper">
+              <a href="javascript:void(0);" id="darkModeToggle" class="header__link">
+                <img id="darkModeIcon" src="./assets/images/light-mode.png" alt="Toggle Dark Mode" style="height: 20px; vertical-align: middle;">
+              </a>
+            </li>
           </ul>
           <div class="header__main-ham-menu-cont">
             <img
@@ -77,6 +83,11 @@
 
             <li class="header__sm-menu-link">
               <a href="./index.html#contact"> Contact </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="javascript:void(0);" id="darkModeToggle" class="header__link" onclick="toggleDarkMode()">
+                <img id="darkModeIcon" src="./assets/images/light-mode.png" alt="Toggle Dark Mode" style="height: 20px; vertical-align: middle;">
+              </a>
             </li>
           </ul>
         </div>
@@ -205,12 +216,20 @@
         <div class="projects__content">
           <div class="projects__row">
             <div class="projects__row-img-cont">
-              <img
-                src="./assets/images/project1-mockup.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+              
+              <div class="device-wrapper">
+                <div class="device device-macbook-pro">
+                  <div class="device-frame">
+                    <img class="device-screen" src="./assets/images/project1-mockup.jpg">
+                  </div>
+                  <div class="device-stripe"></div>
+                  <div class="device-header"></div>
+                  <div class="device-sensors"></div>
+                  <div class="device-btns"></div>
+                  <div class="device-power"></div>
+                </div>
+              </div>
+
             </div>
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">DataQuest AI Hackathon (April 2024)</h3>
@@ -226,12 +245,20 @@
           </div>
           <div class="projects__row">
             <div class="projects__row-img-cont">
-              <img
-                src="./assets/images/project2-mockup.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+              
+              <div class="device-wrapper">
+                <div class="device device-macbook-pro">
+                  <div class="device-frame">
+                    <img class="device-screen" src="./assets/images/project2-mockup.png">
+                  </div>
+                  <div class="device-stripe"></div>
+                  <div class="device-header"></div>
+                  <div class="device-sensors"></div>
+                  <div class="device-btns"></div>
+                  <div class="device-power"></div>
+                </div>
+              </div>
+
             </div>
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Alteryx-Driven Process Automation (July 2024)</h3>
@@ -247,12 +274,20 @@
           </div>
           <div class="projects__row">
             <div class="projects__row-img-cont">
-              <img
-                src="./assets/images/project3-mockup.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+              
+              <div class="device-wrapper">
+                <div class="device device-macbook-pro">
+                  <div class="device-frame">
+                    <img class="device-screen" src="./assets/images/project3-mockup.jpg">
+                  </div>
+                  <div class="device-stripe"></div>
+                  <div class="device-header"></div>
+                  <div class="device-sensors"></div>
+                  <div class="device-btns"></div>
+                  <div class="device-power"></div>
+                </div>
+              </div>
+
             </div>
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Sales Tax Recovery with Stratos Solutions (August 2024)</h3>
@@ -268,12 +303,20 @@
           </div>
           <div class="projects__row">
             <div class="projects__row-img-cont">
-              <img
-                src="./assets/images/project4-mockup.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+              
+              <div class="device-wrapper">
+                <div class="device device-macbook-pro">
+                  <div class="device-frame">
+                    <img class="device-screen" src="./assets/images/project4-mockup.jpg">
+                  </div>
+                  <div class="device-stripe"></div>
+                  <div class="device-header"></div>
+                  <div class="device-sensors"></div>
+                  <div class="device-btns"></div>
+                  <div class="device-power"></div>
+                </div>
+              </div>
+
             </div>
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">United Way Stair Climb Website (November 2024)</h3>
@@ -289,12 +332,20 @@
           </div>
           <div class="projects__row">
             <div class="projects__row-img-cont">
-              <img
-                src="./assets/images/project5-mockup.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
+              
+              <div class="device-wrapper">
+                <div class="device device-macbook-pro">
+                  <div class="device-frame">
+                    <img class="device-screen" src="./assets/images/project5-mockup.png">
+                  </div>
+                  <div class="device-stripe"></div>
+                  <div class="device-header"></div>
+                  <div class="device-sensors"></div>
+                  <div class="device-btns"></div>
+                  <div class="device-power"></div>
+                </div>
+              </div>
+
             </div>
             <div class="projects__row-content">
               <h3 class="projects__row-content-title">Pixel Pets (April 2025)</h3>
