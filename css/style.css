@@ -813,3 +813,8 @@ textarea {
     transform: scale(0.4);
   }
 }
+
+.header__main-ham-menu,
+.header__main-ham-menu-close {
+  color: var(--color-dark-grey-1); /* Light mode */
+}
