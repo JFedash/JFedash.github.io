@@ -37,55 +37,81 @@ headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
 
-// On initial script load, apply theme from sessionStorage or default to light
-const savedTheme = sessionStorage.getItem('theme') || 'light';
-const html = document.documentElement;
-const darkModeToggle = document.getElementById("darkModeToggle");
-const darkModeIcon = document.getElementById("darkModeIcon");
+document.addEventListener('DOMContentLoaded', () => {
+  const html = document.documentElement;
+  let isDarkMode = sessionStorage.getItem('theme') === 'dark';
 
-// Apply saved theme classes once
-if (savedTheme === 'dark') {
-  html.classList.add('theme-dark');
-  html.classList.remove('theme-light');
-} else {
-  html.classList.add('theme-light');
-  html.classList.remove('theme-dark');
-}
+  // Main header toggle elements (single)
+  const mainDarkToggle = document.getElementById('darkModeToggle');
+  const mainDarkIcon = document.getElementById('darkModeIcon');
 
-// Track current mode (true = dark, false = light)
-let isDarkMode = savedTheme === 'dark';
+  // Small menu toggle elements (multiple possible)
+  const smallDarkToggles = document.querySelectorAll('.darkModeToggle');
+  const smallDarkIcons = document.querySelectorAll('.darkModeIcon');
 
-// Update icon based on mode
-function updateIcon() {
-  if (!darkModeIcon) return;
-  darkModeIcon.src = isDarkMode
-    ? "./assets/images/dark-mode.png"
-    : "./assets/images/light-mode.png";
-}
+  // Apply theme classes
+  if (isDarkMode) {
+    html.classList.add('theme-dark');
+    html.classList.remove('theme-light');
+  } else {
+    html.classList.add('theme-light');
+    html.classList.remove('theme-dark');
+  }
 
-// Initial icon update
-updateIcon();
+  function updateIcon(icon) {
+    if (!icon) return;
+    icon.src = isDarkMode
+      ? './assets/images/dark-mode.png'
+      : './assets/images/light-mode.png';
+  }
 
-// Toggle function for button click
-function toggleDarkMode() {
-  isDarkMode = !isDarkMode;
-  html.classList.toggle('theme-dark', isDarkMode);
-  html.classList.toggle('theme-light', !isDarkMode);
+  // Update all icons
+  function updateAllIcons() {
+    if (mainDarkIcon) updateIcon(mainDarkIcon);
+    smallDarkIcons.forEach(icon => updateIcon(icon));
+  }
 
-  sessionStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-  updateIcon();
-}
+  updateAllIcons();
 
-// Hover handlers for the icon
-darkModeToggle.addEventListener("mouseenter", () => {
-  if (!darkModeIcon) return;
-  darkModeIcon.src = isDarkMode
-    ? "./assets/images/dark-mode-hover.png"
-    : "./assets/images/light-mode-hover.png";
+  // Toggle dark mode function
+  function toggleDarkMode() {
+    isDarkMode = !isDarkMode;
+    html.classList.toggle('theme-dark', isDarkMode);
+    html.classList.toggle('theme-light', !isDarkMode);
+    sessionStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    updateAllIcons();
+  }
+
+  // Add click listener to all toggles
+  if (mainDarkToggle) mainDarkToggle.addEventListener('click', toggleDarkMode);
+  smallDarkToggles.forEach(toggle => {
+    toggle.addEventListener('click', toggleDarkMode);
+  });
+
+  // Hover swap for main toggle (whole link)
+  if (mainDarkToggle && mainDarkIcon) {
+    mainDarkToggle.addEventListener('mouseenter', () => {
+      mainDarkIcon.src = isDarkMode
+        ? './assets/images/dark-mode-hover.png'
+        : './assets/images/light-mode-hover.png';
+    });
+    mainDarkToggle.addEventListener('mouseleave', () => {
+      updateIcon(mainDarkIcon);
+    });
+  }
+
+  // Hover swap for small toggles
+  smallDarkToggles.forEach((toggle, i) => {
+    const icon = smallDarkIcons[i];
+    if (!icon) return;
+
+    toggle.addEventListener('mouseenter', () => {
+      icon.src = isDarkMode
+        ? './assets/images/dark-mode-hover.png'
+        : './assets/images/light-mode-hover.png';
+    });
+    toggle.addEventListener('mouseleave', () => {
+      updateIcon(icon);
+    });
+  });
 });
-
-darkModeToggle.addEventListener("mouseleave", () => {
-  updateIcon();
-});
-
-darkModeToggle.addEventListener("click", toggleDarkMode);

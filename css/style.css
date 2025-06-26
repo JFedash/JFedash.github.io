@@ -293,7 +293,12 @@ textarea {
   .projects__row:last-child {
     margin-bottom: 0; }
   .projects__row-img-cont {
-    overflow: hidden; }
+    overflow: hidden;
+    display: flex;           /* use flexbox */
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically if needed */
+    height: auto;
+ }
   .projects__row-img {
     width: 100%;
     display: block;
@@ -601,9 +606,9 @@ textarea {
     text-decoration: none;
     padding: 2.5rem 3rem;
     font-size: 1.6rem;
-    color: #333;
+    color: var(--color-dark-grey-1);
     text-align: right;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--bg-light-grey-2);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -782,8 +787,29 @@ textarea {
 }
 
 .device-wrapper {
-  transform: scale(0.8); /* Adjust scale here */
-  transform-origin: center; /* Keeps it centered */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: scale(0.8);
+  transform-origin: top center;
+
   width: fit-content;
   margin: 0 auto;
+
+  /* Prevent layout shift from original size */
+  height: 0;
+  overflow: visible;
+}
+
+@media (max-width: 56.25em) {
+  .device-wrapper {
+    transform: scale(0.6);
+  }
+}
+
+@media (max-width: 37.5em) {
+  .device-wrapper {
+    transform: scale(0.4);
+  }
 }
